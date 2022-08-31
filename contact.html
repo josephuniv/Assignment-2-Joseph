@@ -1,0 +1,77 @@
+<!-- //-------------------------------------------------------
+// Assignment (2)
+// Written by: (Joseph Jananji 2195417)
+// For "Front-End Web Programming"”" Section 05807– Winter 2022
+// ------------------------------------------------------ -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Software Company - Contact</title>
+    <link rel="icon" href="soft.jpg" type="image/x-jpg">
+    <link rel="stylesheet" href="salary.css">
+    <style>
+        /* To make the page responsive */
+        @media only screen and (max-width:1150px) {
+            /* To change the wrap of body when the window is small */
+            #wrap {
+                width: 100%;
+                margin-left: 0;
+                margin-right: 0;
+                background-color: rgb(202, 125, 125);
+            }
+            /* To change the position of the image when the window is small */
+            #floatrightimg {
+                box-shadow: 5px 5px 10px black;
+                margin-left: 60px;
+                margin-top: 30px;
+                float: none;
+                border-radius: 10px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div id="wrap">
+        <header>
+            <h1>
+                Software Company
+            </h1>
+        </header>
+        <nav>
+            &nbsp;&nbsp;<a href="index.html">Home</a> &nbsp;
+            <!-- I used class current to make the current page link bold for contrast  -->
+            &nbsp;&nbsp;<a href="contact.html"><span class="current"><b>Contact</b></span></a>
+        </nav>
+        <main>
+
+            <img src="contact.jpg" alt="contact" height="220" width="450" id="floatrightimg">
+            <br><br><br><br><br>
+            <form>
+                <label for="fname">* First Name </label> <input type="text" name="fname" id="fname" required="true">
+                <br><br>
+                <label for="lname">* Last Name </label> <input type="text" name="lname" id="lname" required="true">
+                <br><br>
+                <label for="email">* E-mail </label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="email"
+                    name="email" id="email" required="true"><br><br>
+                <label for="phone">Phone </label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <input type="text" name="phone" id="phone"> <br><br>
+                <label for="comment">* Comment: </label>&nbsp;<textarea rows="2" cols="21" name="comment" id="comment"
+                    required="true"></textarea><br><br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input
+                    type="submit" value="Submit">
+            </form><br><br><br><br><br>
+        </main>
+
+        <footer>
+            Copyright &copy; 2022 Software Company<br>
+            <a href="mailto:yourfirstname@yourlastname.com">yourfirstname@yourlastname.com</a>
+        </footer>
+    </div>
+</body>
+
+</html>

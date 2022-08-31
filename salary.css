@@ -1,0 +1,118 @@
+/* //-------------------------------------------------------
+// Assignment (2)
+// Written by: (Joseph Jananji 2195417)
+// For "Front-End Web Programming"”" Section 05807– Winter 2022
+// ------------------------------------------------------ */
+body {
+    background-color: black;
+    font-family: 'Times New Roman', Georgia, Serif;
+    min-width: 600px;
+}
+/* To wrap all the body of the pages */
+#wrap {
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: rgb(196, 121, 121);
+
+}
+
+header {
+    text-align: center;
+    background-color: rgb(119, 115, 115);
+    font-size: x-large;
+    color: black;
+    text-shadow: 2px 2px 2px rgb(207, 159, 159);
+    height: 65px;
+}
+
+nav {
+    text-align: left;
+    font-size: large;
+    padding: 5px;
+    font-size: large;
+}
+/* To remove the decoration of the links */
+a {
+    text-decoration: none;
+}
+/* To configre the links */
+a:link {
+    color: black;
+}
+
+a:visited {
+    color: black;
+}
+
+a:focus {
+    color: rgb(254, 254, 255);
+}
+
+a:hover {
+    color: #dfbc4c;
+}
+
+a:active {
+    color: #772a2a;
+}
+
+main {
+    background-color: rgb(197, 194, 194);
+}
+
+footer {
+    background-color: rgb(119, 115, 115);
+    text-align: center;
+}
+/* To make the current page link different */
+.current {
+    font-weight: bold;
+}
+
+table th {
+    background-color: rgb(207, 159, 159);
+}
+/* To configre the table */
+table {
+    margin-left: 110px;
+    width: 425px
+}
+/* To configre the the cells and table */
+table,
+th,
+td {
+    border-color: black;
+    text-align: center;
+    border-collapse: collapse;
+}
+
+form {
+    padding-left: 50px;
+}
+/* To make to form better  */
+fieldset {
+    width: 400px;
+    height: 200px;
+    margin-left: 110px;
+}
+/* To make the images float on the right of the page  */
+#floatrightimg {
+    box-shadow: 5px 5px 10px black;
+    margin-right: 10%;
+    margin-top: 90px;
+    float: right;
+    border-radius: 10px;
+}
+/* To configre the size of textbox in contact page */
+input[type="text"] {
+    width: 300px;
+}
+/* To configre the size of email in contact page */
+input[type="email"] {
+    width: 300px;
+}
+/* To configre the size of textarea in contact page */
+textarea {
+    width: 300px;
+}

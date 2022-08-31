@@ -1,0 +1,135 @@
+<!-- //-------------------------------------------------------
+// Assignment (2)
+// Written by: (Joseph Jananji 2195417)
+// For "Front-End Web Programming"”" Section 05807– Winter 2022
+// ------------------------------------------------------ -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Software Company - Home</title>
+    <link rel="icon" href="soft.jpg" type="image/x-jpg">
+    <link rel="stylesheet" href="salary.css">
+    <script>
+        // Function to compute the Annual Salary
+        function compute() {
+            var hours;
+            var rate;
+
+            // To check which radio button is checked and assign the rate
+            if (document.getElementById("r1").checked)
+                rate = 30;
+            else if (document.getElementById("r2").checked)
+                rate = 35;
+            else if (document.getElementById("r3").checked)
+                rate = 50;
+            else if (document.getElementById("r4").checked)
+                rate = 20;
+            else
+                alert("You must select a positon");   //If no radio selected
+
+            // To take the hours if it is greater or equal to zero
+            if (parseFloat(document.getElementById("n1").value) >= 0)
+                hours = parseFloat(document.getElementById("n1").value);
+            else
+                alert("You must enter a valid hours");  //If the hours are less than zero or empty
+
+            // If the rate and hours are correct compute the salary
+            if (!isNaN(rate) && !isNaN(hours))
+                document.getElementById("t2").value = hours * rate;
+        }
+    </script>
+    <style>
+        /* To make the page responsive */
+        @media only screen and (max-width:1150px) {
+            /* To change the wrap of body when the window is small */
+            #wrap {
+                width: 100%;
+                margin-left: 0;
+                margin-right: 0;
+                background-color: rgb(202, 125, 125);
+            }
+            /* To change the position of the image when the window is small */
+            #floatrightimg {
+                box-shadow: 5px 5px 10px black;
+                margin-left: 150px;
+                margin-top: 30px;
+                margin-bottom: 30px;
+                float: none;
+                border-radius: 10px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div id="wrap">
+        <header>
+            <h1>
+                Software Company
+            </h1>
+        </header>
+        <nav>
+            <!-- I used class current to make the current page link bold for contrast  -->
+            &nbsp;&nbsp;<a hrf="index.html"><span class="current"><b>Home</b></span></a>&nbsp;
+            &nbsp;&nbsp;<a href="contact.html">Contact</a>
+        </nav>
+        <main>
+            <img src="salary.jpg" alt="salary" height="220" width="350" id="floatrightimg"><br>
+            <fieldset>
+                <legend>Compute Salary</legend>
+                <form>
+                    <input type="radio" name="r1" id="r1" value="Accoutant">
+                    <label
+                        for="r1">Accoutant</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <input type="radio" name="r1" id="r2">
+                    <label for="r2">Software Engineer</label><br>
+                    <input type="radio" name="r1" id="r3">
+                    <label for="r3">Project Manager</label>&nbsp;&nbsp;&nbsp;
+                    <input type="radio" name="r1" id="r4">
+                    <label for="r4">Receptionist</label><br><br>
+                    <label for="n1">Number of working hours in a year:</label>
+                    <input type="number" name="n1" id="n1"
+                        style="background-color:rgb(223, 176, 176);width:80px"><br><br>
+                    <!-- When the button is clicked call the compute function -->
+                    <input type="button" onclick="compute()" name="s1" id="s1" value="Compute Annual Salary"
+                        style="margin-left:70px ;"><br><br>
+                    <label for="t2">Annual Salary:</label>
+                    <input type="text" name="t2" id="t2" style="background-color:rgb(223, 176, 176);width:210px">
+                </form>
+            </fieldset>
+            <br><br>
+            <table border="1">
+                <tr>
+                    <th> Position </th>
+                    <th> Hourly Rate </th>
+                </tr>
+                <tr>
+                    <td>Accountant </td>
+                    <td>30 </td>
+                </tr>
+                <tr>
+                    <td>Project Manager </td>
+                    <td>50 </td>
+                </tr>
+                <tr>
+                    <td>Software Engineer </td>
+                    <td>35 </td>
+                </tr>
+                <tr>
+                    <td>Receptionist </td>
+                    <td>20 </td>
+            </table>
+            <br><br>
+        </main>
+        <footer>
+            Copyright &copy; 2022 Software Company<br>
+            <a href="mailto:yourfirstname@yourlastname.com">yourfirstname@yourlastname.com</a>
+        </footer>
+    </div>
+</body>
+
+</html>
